@@ -143,8 +143,12 @@
               		  </target>
               		
               		  <taskdef name="testng" classpathref="GmailAutomation.classpath"
-              	          classname="org.testng.TestNGAntTask" />
-              	 
+              	          classname="org.testng.TestNGAntTask" >        	 
+              			<classpath>
+              				<pathelement location="lib/testng-6.8.5.jar"/>
+              			</classpath>
+	              	</taskdef>
+              	
               		  <target name="test" depends="all">
               		  	<testng classpathref="GmailAutomation.classpath" useDefaultListeners="false"
               	            listeners="org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
