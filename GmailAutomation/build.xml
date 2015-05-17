@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="test" name="GmailAutomation">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="E:/eclipse-SDK-3.7.1-win32-x86_64/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="GmailAutomation.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/aopalliance.jar"/>
+        <pathelement location="lib/dom4j-1.6.1.jar"/>
+        <pathelement location="lib/guice-3.0.jar"/>
+        <pathelement location="lib/guice-assistedinject-3.0.jar"/>
+        <pathelement location="lib/guice-grapher-3.0.jar"/>
+        <pathelement location="lib/guice-jmx-3.0.jar"/>
+        <pathelement location="lib/guice-jndi-3.0.jar"/>
+        <pathelement location="lib/guice-multibindings-3.0.jar"/>
+        <pathelement location="lib/guice-persist-3.0.jar"/>
+        <pathelement location="lib/guice-servlet-3.0.jar"/>
+        <pathelement location="lib/guice-spring-3.0.jar"/>
+        <pathelement location="lib/guice-struts2-plugin-3.0.jar"/>
+        <pathelement location="lib/guice-throwingproviders-3.0.jar"/>
+        <pathelement location="lib/javax.inject.jar"/>
+        <pathelement location="lib/jaxb-api-2.2.jar"/>
+        <pathelement location="lib/poi.jar"/>
+        <pathelement location="lib/poi-3.5-final.jar"/>
+        <pathelement location="lib/poi-3.5-final-sources.jar"/>
+        <pathelement location="lib/poi-3.9.jar"/>
+        <pathelement location="lib/poi-contrib-3.5-final.jar"/>
+        <pathelement location="lib/poi-ooxml-3.5-FINAL.jar"/>
+        <pathelement location="lib/poi-ooxml-schemas-3.10-FINAL.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.0.2-beta1.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.1-beta1.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.1-beta2.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.5-beta1.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.5-beta3.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.5-beta4.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.5-beta5.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.5-beta6.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.6-sources.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.7-sources.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.8-beta1.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.8-beta1-sources.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.8-beta2.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.8-beta2-sources.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.8-sources.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.9-sources.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.10-beta1.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.10-beta1-sources.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.10-beta2.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.10-beta2-sources.jar"/>
+        <pathelement location="lib/reportng-1.1.4.jar"/>
+        <pathelement location="lib/selenium-java-2.43.0.jar"/>
+        <pathelement location="lib/selenium-java-2.43.0-srcs.jar"/>
+        <pathelement location="lib/testng-6.0.1.jar"/>
+        <pathelement location="lib/testng-6.8.5.jar"/>
+        <pathelement location="lib/velocity-dep-1.4.jar"/>
+        <pathelement location="lib/xmlbeans-2.3.0.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/dom4j-1.6.1.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/jaxb-api-2.2.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-3.5-final.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-3.5-final-sources.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-3.9.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-contrib-3.5-final.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-ooxml-3.5-FINAL.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-ooxml-schemas-3.10-FINAL.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.0.2-beta1.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.1-beta1.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.1-beta2.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.5-beta1.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.5-beta3.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.5-beta4.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.5-beta5.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.5-beta6.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.6-sources.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.7-sources.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.8-beta1.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.8-beta1-sources.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.8-beta2.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.8-beta2-sources.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.8-sources.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.9-sources.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.10-beta1.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.10-beta1-sources.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.10-beta2.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.10-beta2-sources.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/selenium-java-2.43.0.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/selenium-java-2.43.0-srcs.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/testng-6.0.1.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/testng-6.8.5.jar"/>
+        <pathelement location="../../Automation/SeleniumAutomation/xmlbeans-2.3.0.jar"/>
+        <pathelement location="lib/apache-mime4j-0.6.jar"/>
+        <pathelement location="lib/bsh-1.3.0.jar"/>
+        <pathelement location="lib/cglib-nodep-2.1_3.jar"/>
+        <pathelement location="lib/commons-codec-1.9.jar"/>
+        <pathelement location="lib/commons-collections-3.2.1.jar"/>
+        <pathelement location="lib/commons-exec-1.1.jar"/>
+        <pathelement location="lib/commons-io-2.4.jar"/>
+        <pathelement location="lib/commons-jxpath-1.3.jar"/>
+        <pathelement location="lib/commons-lang3-3.3.2.jar"/>
+        <pathelement location="lib/commons-logging-1.1.3.jar"/>
+        <pathelement location="lib/cssparser-0.9.14.jar"/>
+        <pathelement location="lib/guava-15.0.jar"/>
+        <pathelement location="lib/hamcrest-core-1.3.jar"/>
+        <pathelement location="lib/hamcrest-library-1.3.jar"/>
+        <pathelement location="lib/htmlunit-2.15.jar"/>
+        <pathelement location="lib/htmlunit-core-js-2.15.jar"/>
+        <pathelement location="lib/httpclient-4.3.4.jar"/>
+        <pathelement location="lib/httpcore-4.3.2.jar"/>
+        <pathelement location="lib/httpmime-4.3.4.jar"/>
+        <pathelement location="lib/ini4j-0.5.2.jar"/>
+        <pathelement location="lib/jcommander-1.29.jar"/>
+        <pathelement location="lib/jetty-websocket-8.1.8.jar"/>
+        <pathelement location="lib/jna-3.4.0.jar"/>
+        <pathelement location="lib/jna-platform-3.4.0.jar"/>
+        <pathelement location="lib/json-20080701.jar"/>
+        <pathelement location="lib/junit-dep-4.11.jar"/>
+        <pathelement location="lib/nekohtml-1.9.21.jar"/>
+        <pathelement location="lib/netty-3.5.7.Final.jar"/>
+        <pathelement location="lib/operadriver-1.5.jar"/>
+        <pathelement location="lib/phantomjsdriver-1.1.0.jar"/>
+        <pathelement location="lib/protobuf-java-2.4.1.jar"/>
+        <pathelement location="lib/sac-1.3.jar"/>
+        <pathelement location="lib/serializer-2.7.1.jar"/>
+        <pathelement location="lib/xalan-2.7.1.jar"/>
+        <pathelement location="lib/xercesImpl-2.11.0.jar"/>
+        <pathelement location="lib/xml-apis-1.4.01.jar"/>
+        <pathelement location="lib/jxl-2.4.2.jar"/>
+    </path>
+              	<target name="all" depends="clean">
+              		    <echo>${ant.version}</echo>
+              		    <echo>Java ${ant.java.version}</echo>
+              		    <echo>Building</echo>
+              		  	<javac destdir="bin" >
+              	            <src path="src"/>
+              		  		<classpath refid="GmailAutomation.classpath"/>
+              	        </javac>
+              		  </target>
+              		
+              		  <taskdef name="testng" classpathref="GmailAutomation.classpath"
+              	          classname="org.testng.TestNGAntTask" />
+              	 
+              		  <target name="test" depends="all">
+              		  	<testng classpathref="GmailAutomation.classpath" useDefaultListeners="false"
+              	            listeners="org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+              		  		<xmlfileset dir="${basedir}" includes="TestNG.xml"/>
+              		  		<sysproperty key="org.uncommons.reportng.title" value="My Test Report"/>
+              		  		<!--<sysproperty key="webdriver.ie.driver" value="${basedir}/IEDriverServer.exe"/>-->
+              		  		<sysproperty key="webdriver.chrome.driver" value="${basedir}/chromedriver-win.exe"/>
+              			</testng>
+              		  </target>
+              		
+
+              		
+              		  <target name="clean">
+              		  	    <echo>Deleteing old class files</echo>
+              		  		<delete dir="${basedir}/bin"/>
+              		  		<mkdir dir="${basedir}/bin"/>
+              		  		
+              		  		<echo>Deleteing old result files</echo>
+              		  		<delete dir="${basedir}/test-output"/>
+              		  		<mkdir dir="${basedir}/test-output"/>
+              		  		<mkdir dir="${basedir}/test-output/html"/>
+              		  		<mkdir dir="${basedir}/test-output/junitreports"/>
+              		  		<mkdir dir="${basedir}/test-output/ScreenShots"/>
+              		  		<mkdir dir="${basedir}/test-output/xml"/>
+              		  	
+              		  </target>
+              	
+              	
+</project>
