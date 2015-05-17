@@ -142,8 +142,7 @@
               	        </javac>
               		  </target>
               		
-              		  <taskdef name="testng" classpathref="GmailAutomation.classpath"
-              	          classname="org.testng.TestNGAntTask" >        	 
+              		  <taskdef name="testng" classname="org.testng.TestNGAntTask" >        	 
               			<classpath>
               				<pathelement location="lib/testng-6.8.5.jar"/>
               			</classpath>
