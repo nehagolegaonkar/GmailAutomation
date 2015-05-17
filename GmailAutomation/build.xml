@@ -56,8 +56,8 @@
         <pathelement location="lib/reportng-1.1.4.jar"/>
         <pathelement location="lib/selenium-java-2.43.0.jar"/>
         <pathelement location="lib/selenium-java-2.43.0-srcs.jar"/>
-        <pathelement location="lib/testng-6.0.1.jar"/>
-        <pathelement location="lib/testng-6.8.5.jar"/>
+        <pathelement location="lib/selenium-server.jar"/>
+        <pathelement location="lib/testng-6.8.7.jar"/>
         <pathelement location="lib/velocity-dep-1.4.jar"/>
         <pathelement location="lib/xmlbeans-2.3.0.jar"/>
         <pathelement location="../../Automation/SeleniumAutomation/dom4j-1.6.1.jar"/>
@@ -91,8 +91,6 @@
         <pathelement location="../../Automation/SeleniumAutomation/poi-scratchpad-3.10-beta2-sources.jar"/>
         <pathelement location="../../Automation/SeleniumAutomation/selenium-java-2.43.0.jar"/>
         <pathelement location="../../Automation/SeleniumAutomation/selenium-java-2.43.0-srcs.jar"/>
-        <pathelement location="../../Automation/SeleniumAutomation/testng-6.0.1.jar"/>
-        <pathelement location="../../Automation/SeleniumAutomation/testng-6.8.5.jar"/>
         <pathelement location="../../Automation/SeleniumAutomation/xmlbeans-2.3.0.jar"/>
         <pathelement location="lib/apache-mime4j-0.6.jar"/>
         <pathelement location="lib/bsh-1.3.0.jar"/>
@@ -114,7 +112,7 @@
         <pathelement location="lib/httpcore-4.3.2.jar"/>
         <pathelement location="lib/httpmime-4.3.4.jar"/>
         <pathelement location="lib/ini4j-0.5.2.jar"/>
-        <pathelement location="lib/jcommander-1.29.jar"/>
+       <!-- <pathelement location="lib/jcommander-1.29.jar"/>-->
         <pathelement location="lib/jetty-websocket-8.1.8.jar"/>
         <pathelement location="lib/jna-3.4.0.jar"/>
         <pathelement location="lib/jna-platform-3.4.0.jar"/>
@@ -142,15 +140,15 @@
               	        </javac>
               		  </target>
               		
-              		  <taskdef name="testng" classname="org.testng.TestNGAntTask" >        	 
-              			<classpath>
-              				<pathelement location="lib/testng-6.8.5.jar"/>
-              			</classpath>
+              		  <taskdef name="testng" classpathref="GmailAutomation.classpath" classname="org.testng.TestNGAntTask" >
+              			<!--<classpath>
+              				<pathelement location="lib/testng-6.8.7.jar"/>
+              			</classpath>-->
 	              	</taskdef>
-              	
+
               		  <target name="test" depends="all">
               		  	<testng useDefaultListeners="false"
-              	            listeners="org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+              	            listeners="org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter" classpathref="GmailAutomation.classpath">
               		  		<xmlfileset dir="${basedir}" includes="TestNG.xml"/>
               		  		<sysproperty key="org.uncommons.reportng.title" value="My Test Report"/>
               		  		<!--<sysproperty key="webdriver.ie.driver" value="${basedir}/IEDriverServer.exe"/>-->

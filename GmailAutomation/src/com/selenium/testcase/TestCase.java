@@ -1,12 +1,9 @@
 package com.selenium.testcase;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.concurrent.TimeUnit;
-
+import com.selenium.common.CommonFunction;
+import com.selenium.firstpackage.page.LandingPage;
+import com.selenium.firstpackage.page.SignInPage;
 import junit.framework.Assert;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -16,9 +13,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.selenium.common.CommonFunction;
-import com.selenium.firstpackage.page.LandingPage;
-import com.selenium.firstpackage.page.SignInPage;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
 
 public class TestCase {
 
@@ -64,7 +62,7 @@ public class TestCase {
 			}
 
 		} catch (Throwable e) {
-			Assert.assertTrue(true);
+			Assert.assertTrue(false);
 			System.out.println("Error");
 		}
 

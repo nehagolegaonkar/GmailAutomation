@@ -1,18 +1,10 @@
 package com.selenium.common;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Random;
-import java.util.Vector;
-
+import com.thoughtworks.selenium.Selenium;
+import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -21,17 +13,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.apache.commons.io.FileUtils;
-import org.apache.poi.hssf.model.Workbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.thoughtworks.selenium.Selenium;
-import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
 
 public class CommonFunction {
     static WebDriver driver;
@@ -492,7 +477,7 @@ public class CommonFunction {
     */
     
     public static boolean checkWhetherTestShouldBeExcuted(String testCaseName) throws IOException {
-    	String filePath = "C:\\UIAutomation\\GmailAutomation\\TestData\\TestData.xlt";
+    	String filePath = "TestData\\TestData.xlt";
 		Vector paramData = new Vector();
 		TestData td = new TestData(filePath);
 		td.getDatafromXL();
